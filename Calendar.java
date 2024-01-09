@@ -1,28 +1,31 @@
-public class Calendar1 {	
+public class Calendar {	
 	static int dayOfMonth;   
 	static int month;
-	static int year;
+	static int year;   
 	
-	 public static void main(String args[]) {
-		int count = 0;
+	public static void main(String args[]) {
+        int givenYear = Integer.parseInt(args[0]);
+		advance(givenYear);
+    }
+
+    private static void advance(int givenYear) {
 		int dayOfYears;
-		for (year = 1990; year < 2000; year++) {
+		for (year = 1990; year <= givenYear; year++) {
 			for (month = 1; month <= 12; month++) {
 				for (dayOfMonth = 1; dayOfMonth <= nDaysInMonth(month, year); dayOfMonth++) {
-					 dayOfYears++;
+                    if (year == givenYear){
 					if (dayOfYears % 7 == 0){
 					    System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
-						if(dayOfMonth == 1){
-						count += 1;
-						}
+
 					}
 					else{
 					   System.out.println(dayOfMonth + "/" + month + "/" + year);
 					}
+                }
+				dayOfYears++;
 			    }
 			}
 		}
-		System.out.println("Duing the 20th century, " + count + " Sundays fell on the first day of the month");
 	 }
 
 	private static boolean isLeapYear(int year) {
