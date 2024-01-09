@@ -5,7 +5,7 @@ public class Calendar1 {
 	
 	 public static void main(String args[]) {
 		int count = 0;
-		int dayOfYears;
+		int dayOfYears = 1;
 		for (year = 1990; year < 2000; year++) {
 			for (month = 1; month <= 12; month++) {
 				for (dayOfMonth = 1; dayOfMonth <= nDaysInMonth(month, year); dayOfMonth++) {
