@@ -1,25 +1,19 @@
-/** String processing exercise 1. */
 public class LowerCase {
     public static void main(String[] args) {  
         String str = args[0];
 		System.out.println(lowerCase(str));
     }
 
-   /**
-    * Returns a string which is identical to the original string, 
-    * except that all the upper-case letters are converted to lower-case letters.
-    * Non-letter characters are left as is.
-    */
-    public static String lowerCase(String str) {
-		String s = "";
-	    int l = str.length();
+    public static String lowerCase(String s) {
+		String w = "";
+	    int l = s.length();
 	for(int i = 0; i < l; i++){
-		char temp = str.charAt(i);
-		if(temp >= 'A' && c <= 'Z'){
+		char temp = s.charAt(i);
+		if(temp >= 'A' && temp <= 'Z'){
 			temp += 32;
-			s += temp;
-		} else s += temp;
+			w += temp;
+		} else w += temp;
 	    }
-		return s;
+		return w;
     }
 }
