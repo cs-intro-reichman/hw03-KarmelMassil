@@ -5,15 +5,15 @@ public class Calendar1 {
 	
 	 public static void main(String args[]) {
 		int count = 0;
-		int dayOfYears = 1;
-		for (year = 1990; year < 2000; year++) {
+	    int dayOfYears = 0;
+		for (year = 1900; year < 2000; year++) {
 			for (month = 1; month <= 12; month++) {
 				for (dayOfMonth = 1; dayOfMonth <= nDaysInMonth(month, year); dayOfMonth++) {
 					 dayOfYears++;
 					if (dayOfYears % 7 == 0){
 					    System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
 						if(dayOfMonth == 1){
-						count += 1;
+						count++;
 						}
 					}
 					else{
@@ -22,6 +22,7 @@ public class Calendar1 {
 			    }
 			}
 		}
+		
 		System.out.println("Duing the 20th century, " + count + " Sundays fell on the first day of the month");
 	 }
 

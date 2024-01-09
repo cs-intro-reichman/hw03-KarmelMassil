@@ -10,7 +10,7 @@ public class Calendar {
 
     private static void advance(int givenYear) {
 		int dayOfYears = 1;
-		for (year = 1990; year <= givenYear; year++) {
+		for (year = 1900; year <= givenYear; year++) {
 			for (month = 1; month <= 12; month++) {
 				for (dayOfMonth = 1; dayOfMonth <= nDaysInMonth(month, year); dayOfMonth++) {
                     if (year == givenYear){
