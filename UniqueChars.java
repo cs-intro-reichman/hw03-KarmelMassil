@@ -14,10 +14,10 @@ public class UniqueChars {
         String s = "";
 		int l = str.length();
 	    for(int i = 0; i < l; i++) {
-		    char d = str.charAt(i);
-			if(d != ' ') {
+		    char temp = str.charAt(i);
+			if(temp != ' ') {
 			if(str.indexOf(d) == i){
-				s += d;
+				s += temp;
 			}
 			}
 			else {

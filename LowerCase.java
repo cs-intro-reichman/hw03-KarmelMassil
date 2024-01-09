@@ -14,11 +14,11 @@ public class LowerCase {
 		String s = "";
 	    int l = str.length();
 	for(int i = 0; i < l; i++){
-		char c = str.charAt(i);
-		if(c >= 'A' && c <= 'Z'){
-			c += 32;
-			s += c;
-		} else s += c;
+		char temp = str.charAt(i);
+		if(temp >= 'A' && c <= 'Z'){
+			temp += 32;
+			s += temp;
+		} else s += temp;
 	    }
 		return s;
     }
