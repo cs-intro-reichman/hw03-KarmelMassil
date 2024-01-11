@@ -3,7 +3,7 @@ public class LoanCalc {
 	static double epsilon = 0.001;  // The computation tolerance (estimation error)
 	static int iterationCounter;    // Monitors the efficiency of the calculation
 	
-	public static void main(String[] args) {		
+	public static void main (String[] args) {		
 		// Gets the loan data
 		double loan = Double.parseDouble(args[0]);
 		double rate = Double.parseDouble(args[1]);
@@ -23,7 +23,7 @@ public class LoanCalc {
 		System.out.println("number of iterations: " + iterationCounter);
 	}
 
-    public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {  
+    public static double bruteForceSolver (double loan, double rate, int n, double epsilon) {  
     	iterationCounter = 0;
 		double g = loan / n;
 		while ((endBalance(loan, rate, n, g)) >= epsilon && (g < loan)) {
@@ -33,16 +33,16 @@ public class LoanCalc {
 		return g;
     }
 
-    public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
+    public static double bisectionSolver (double loan, double rate, int n, double epsilon) {  
     	iterationCounter = 0;
 		double l = loan / n;
 		double h = loan;
 		double g = (l + h) / 2;
-		while((h - l) >= epsilon){
-		if (endBalance(loan, rate, n, g) * endBalance(loan, rate, n, l) > 0){
+		while ((h - l) >= epsilon){
+		if (endBalance (loan, rate, n, g) * endBalance (loan, rate, n, l) > 0) {
 			l = g;
 		}
-		else{
+		else {
             h = g;
 		} 
 		g = (h + l)/2;
@@ -51,9 +51,9 @@ public class LoanCalc {
 		return g;
     }
 
-	private static double endBalance(double loan, double rate, int n, double payment) {
-		for (int i = 0; i < n; i++){
-		double balance = (loan - payment) * (1+ (rate / 100));
+	private static double endBalance (double loan, double rate, int n, double payment) {
+		for (int i = 0; i < n; i++) {
+		double balance = (loan - payment) * (1 + (rate / 100));
     	loan = balance;
 		}
 		return loan;
