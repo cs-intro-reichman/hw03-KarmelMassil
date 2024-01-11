@@ -1,4 +1,4 @@
-public class Calander {
+public class Calendar {
     static int dayOfMonth;
     static int month;
     static int year;
