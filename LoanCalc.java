@@ -1,3 +1,10 @@
+/*
+#feedback
+
+good work!
+*/
+
+
 public class LoanCalc {
 	
 	static double epsilon = 0.001;  // The computation tolerance (estimation error)
